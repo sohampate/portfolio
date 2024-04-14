@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-behavior: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+
+body {
+  text-wrap: balance;
+  font-family: sans-serif;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: white;
+}
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+/* Home Section */
+.btn-primary {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  animation: pulse 2s infinite;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.list-inline-item {
+  display: inline-flex;
+  margin-right: 10px;
+}
+.list-inline-item a {
+  color: #555;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+.list-inline-item a:hover,
+.list-inline-item a:focus {
+  color: #007bff;
+}
+.list-inline-item a::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+.list-inline-item a:hover::before,
+.list-inline-item a:focus::before {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* About Section */
+.about-avatar h2 {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.about-list {
+  padding-top: 10px;
+}
+.about-list .media {
+  padding: 5px 0;
+}
+.about-list label {
+  color: white;
+  font-weight: 600;
+  width: 88px;
+  margin: 0;
+  position: relative;
+}
+.about-list label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 11px;
+  width: 1px;
+  height: 12px;
+  background: #20247b;
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  margin: auto;
+  opacity: 0.5;
+}
+.about-list p {
+  margin: 0;
+  font-size: 15px;
+}
